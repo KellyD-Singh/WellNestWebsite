@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,7 +45,7 @@
 
             <div class="feature-item">
                 <h3>Appointment Scheduling</h3>
-                <img src="images/appointmentimage.jpg" alt="Appointment Scheduling" class="feature-image">
+                <img src="images/ss100.png" alt="Appointment Scheduling" class="feature-image feature-image-large">
                 <p>Set reminders for important appointments.</p>
             </div>
 
@@ -55,33 +55,123 @@
                 <p>Never miss a dose with automated reminders.</p>
             </div>
         </section>
+        <!-- Task Delegation and Slideshow Section (side by side) -->
+        <section class="task-slideshow-container">
+            <!-- Task Delegation Feature -->
+            <div class="task-delegation">
+                <div class="task-form-container">
+                    <h2>Task Delegation</h2>
+                    <p>Assign tasks to other caregivers easily.</p>
+                    <form id="taskForm" action="delegate_task.php" method="post">
+                        <label for="task">Task:</label>
+                        <input type="text" id="task" name="task" placeholder="Enter task" required>
 
-        <!-- Task Delegation Feature -->
-        <section class="task-delegation">
-            <h2>Task Delegation</h2>
-            <p>Assign tasks to other caregivers easily.</p>
-            <form id="taskForm" action="delegate_task.php" method="post">
-                <label for="task">Task:</label>
-                <input type="text" id="task" name="task" placeholder="Enter task" required>
+                        <label for="assignee">Assign To:</label>
+                        <select id="assignee" name="assignee" required>
+                            <option value="caregiver1">Caregiver 1</option>
+                            <option value="caregiver2">Caregiver 2</option>
+                            <option value="caregiver3">Caregiver 3</option>
+                        </select>
 
-                <label for="assignee">Assign To:</label>
-                <select id="assignee" name="assignee" required>
-                    <option value="caregiver1">Caregiver 1</option>
-                    <option value="caregiver2">Caregiver 2</option>
-                    <option value="caregiver3">Caregiver 3</option>
-                </select>
+                        <button type="submit"><i class="fas fa-check-square fa-lg"></i> Delegate Task</button>
+                    </form>
+                    <p id="taskConfirmation" style="display:none; color: green;">Task successfully delegated!</p>
+                </div>
+            </div>
 
-                <button type="submit"><i class="fas fa-check-square fa-lg"></i> Delegate Task</button>
-            </form>
-            <p id="taskConfirmation" style="display:none; color: green;">Task successfully delegated!</p>
+            <!-- Slideshow Section for Task Delegation -->
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <div class="image-wrapper">
+                    <img src="images/ss0.png" alt="Delegating Tasks Screenshot 0" />
+                    <p class="annotation">This is WellNest's main menu.</p>
+                    </div>
+                </div>
+                <div class="slideshow">
+                    <div class="image-wrapper">
+                        <img src="images/ss1.png" alt="Delegating Tasks Screenshot 1">
+                        <p class="annotation">This shows the calendar display along with its features.</p>
+                    </div>
+                </div>
+                <div class="slideshow">
+                    <div class="image-wrapper">
+                        <img src="images/ss2.png" alt="Delegating Tasks Screenshot 2">
+                        <p class="annotation">Here, tasks can be added, edited or deleted.</p>
+                    </div>
+                </div>
+                <div class="slideshow">
+                    <div class="image-wrapper">
+                        <img src="images/ss3.png" alt="Delegating Tasks Screenshot 3">
+                        <p class="annotation">You will then be prompted to enter the task name.</p>
+                    </div>
+                </div>
+                <div class="slideshow">
+                    <div class="image-wrapper">
+                        <img src="images/ss4.png" alt="Delegating Tasks Screenshot 4">
+                        <p class="annotation">You will then be prompted to delegate this task to someone.</p>
+                    </div>
+                </div>
+                <div class="slideshow">
+                    <div class="image-wrapper">
+                        <img src="images/ss5.png" alt="Delegating Tasks Screenshot 5">
+                        <p class="annotation">Prompted to enter a time for this task to be completed.</p>
+                    </div>
+                </div>
+                <div class="slideshow">
+                    <div class="image-wrapper">
+                        <img src="images/ss6.png" alt="Delegating Tasks Screenshot 6">
+                        <p class="annotation">Lastly, you will be prompted to enter a deadline date for the specific task.</p>
+                    </div>
+                </div>
+                <div class="slideshow">
+                    <div class="image-wrapper">
+                        <img src="images/ss7.png" alt="Delegating Tasks Screenshot 7">
+                        <p class="annotation">Finally, users can view their specific tasks and edit tasks' status for specific dates.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows for Task Delegation Slideshow -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </section>
 
-        <!-- Calendar View Feature -->
-        <section class="calendar">
-            <h2>Caregiver's Calendar</h2>
-            <button id="addEventButton"><i class="fas fa-calendar-plus fa-lg"></i> Add New Event</button>
-            <div id="calendar"></div>
+        <!-- Calendar and Slideshow Section -->
+        <section class="calendar-slideshow">
+            <!-- Calendar Section -->
+            <div class="calendar-wrapper">
+                <h2>Caregiver's Calendar</h2>
+                <button id="addEventButton"><i class="fas fa-calendar-plus"></i> Add New Event</button>
+                <div id="calendar"></div>
+            </div>
+
+            <!-- Slideshow Section -->
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <div class="image-wrapper">
+                        <img src="images/ss8.png" alt="Calendar Feature Screenshot 1">
+                        <p class="annotation">This displays the calendar view and the application's main features.</p>
+                    </div>
+                </div>
+                <div class="slideshow">
+                    <div class="image-wrapper">
+                        <img src="images/ss9.png" alt="Calendar Feature Screenshot 2">
+                        <p class="annotation">Selecting the "View and Read Out Tasks" button, users can identify today's tasks.</p>
+                    </div>
+                </div>
+                <div class="slideshow">
+                    <div class="image-wrapper">
+                        <img src="images/ss10.png" alt="Calendar Feature Screenshot 3">
+                        <p class="annotation">Selecting the "View and Read Out Appointments" button, users can identify today's appointments.</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
         </section>
+
 
         <!-- Add Event Modal -->
         <div id="eventModal" class="modal">
@@ -212,5 +302,36 @@
             document.getElementById('taskForm').reset();
         };
     </script>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll(".slideshow");
+            slideIndex = (index + slides.length) % slides.length; // Loop back if out of bounds
+            slides.forEach((slide, i) => {
+                slide.style.display = i === slideIndex ? "block" : "none";
+            });
+        }
+
+        function changeSlide(step) {
+            const slides = document.querySelectorAll(".slideshow");
+            slides[slideIndex].style.opacity = 0; // Start fade-out
+            setTimeout(() => {
+                showSlide(slideIndex + step);
+                slides[slideIndex].style.opacity = 1; // Fade-in new slide
+            }, 500);
+        }
+
+        // Initialize slideshow with morphing effect
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll(".slideshow");
+            slides.forEach(slide => (slide.style.transition = "opacity 0.5s ease"));
+            showSlide(slideIndex); // Show first slide
+        });
+    </script>
+
+
 </body>
 </html>
+

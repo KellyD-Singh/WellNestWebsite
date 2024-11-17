@@ -1,4 +1,4 @@
-﻿/* General Styling */
+/* General Styling */
 body {
     font-family: 'Arial', sans-serif;
     color: #333;
@@ -148,6 +148,13 @@ footer {
     height: auto;
     margin-bottom: 10px; /* Space between image and text */
 }
+/* Larger Image for ss100 */
+.feature-image-large {
+    width: 294px; /* Adjust size */
+    height: auto;
+    margin-bottom: 10px;
+}
+
 
 /* Feature Title Styling */
 .feature-title {
@@ -234,25 +241,30 @@ footer {
 
 /* Calendar Section (Aesthetic changes) */
 /* Calendar adjustments */
-#calendar {
-    width: calc(100% - 1cm); /* 1cm smaller */
-    height: calc(100% - 1cm); /* 1cm smaller */
+
+
+.slideshow-container {
+    display: flex; /* Ensure both slideshow and calendar are side by side */
+    justify-content: space-between; /* Adjust space between them */
 }
 
-/* Remove Calendar Icon in the calendar section */
-.calendar .fa-calendar-day {
-    display: none;
+    .slideshow-container .slideshow {
+        flex: 1; /* Make the slideshow take equal space */
+        padding: 1px; /* Add padding for some spacing */
+    }
+/* Flexbox layout for slideshow and calendar */
+.slideshow-container {
+    display: flex; /* Align items side by side */
+    justify-content: space-between; /* Space them out evenly */
+    align-items: flex-start; /* Align both sections at the top */
 }
-.calendar {
-    margin: 50px auto;
-    max-width: 800px;
-    padding: 30px;
-    background-color: #fff7f9; /* Light pink for warmth */
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border: 3px dashed #f6d3e5; /* Dashed border for cuteness */
-    position: relative;
+
+/* Slideshow settings */
+.slideshow {
+    flex: 1; /* Allow slideshow to take up space */
+    padding: 10px; /* Some padding around images */
 }
+
 
 /* Calendar Background */
 #calendar {
@@ -634,3 +646,555 @@ section {
     font-size: 14px;
     padding: 10px 20px;
 }
+
+
+/* Container to hold both Task Delegation and Slideshow side by side */
+.task-slideshow-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Add some space between the sections */
+}
+
+/* Task Delegation Section */
+.task-delegation {
+    flex: 1;
+    border: 2px solid #1E90FF; /* Blue border */
+    padding: 20px;
+    background-color: #f4f4f9; /* Light background */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Slideshow Section */
+/* Slideshow Container */
+.slideshow-container {
+    width: 100%;
+    max-width: 600px; /* Same as task-delegation width */
+    margin: 0 auto; /* Center the slideshow */
+    padding: 10px;
+    border: 2px solid #ADD8E6; /* Light blue border to match the aesthetic */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f9f9f9; /* Optional: a light background to match the site aesthetic */
+}
+
+/* Additional styling for the slideshow */
+.slideshow {
+    display: none;
+}
+
+    .slideshow .image-wrapper {
+        position: relative;
+        text-align: center;
+    }
+
+    /* Individual Slideshow Image */
+    .slideshow img {
+        width: 100%; /* Ensure the images fill the width of the container */
+        max-width: 100%; /* Prevent images from going beyond container size */
+        height: auto; /* Maintain aspect ratio */
+    }
+/* Import a cute, aesthetic font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+/* Slideshow Annotations */
+.annotation {
+    text-align: center; /* Center annotations */
+    font-family: 'Pacifico', cursive; /* Cute font */
+    font-size: 1.2em; /* Smaller font size */
+    color: black; /* Change text color to black */
+    margin-top: 10px;
+    background-color: rgba(173, 216, 230, 0.8); /* Light pastel blue background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 10px 15px; /* Space inside the bubble */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for subtle effect */
+    display: inline-block; /* Keep the bubble size consistent */
+    width: fit-content; /* Adjust to text size */
+    max-width :90%;
+}
+
+
+
+/* Navigation Arrows Styling */
+.prev, .next {
+    cursor: pointer; /* Make cursor an arrow */
+}
+
+    .prev:hover, .next:hover {
+        cursor: pointer; /* Ensure cursor stays as an arrow on hover */
+    }
+
+
+
+/* Task form button */
+button {
+    background-color: #1E90FF; /* Blue button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button:hover {
+        background-color: #1C86EE; /* Darker blue on hover */
+    }
+
+
+
+
+/* Calendar Section */
+.calendar {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Slideshow Section */
+.slideshow-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid #ADD8E6; /* Light blue border to match aesthetic */
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.slideshow img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.annotation {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.2em;
+    color: black;
+    margin-top: 10px;
+    background-color: rgba(173, 216, 230, 0.8); /* Light blue background */
+    border-radius: 15px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: fit-content;
+    max-width: 90%;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+    .prev:hover, .next:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+/* Flexbox layout for slideshow and calendar */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Slideshow settings */
+.slideshow-container {
+    flex: 1;
+    margin-right: 20px; /* Some space between slideshow and calendar */
+}
+
+.slideshow {
+    margin-bottom: 20px; /* Space between slideshow items */
+}
+
+/* Calendar settings */
+.calendar-container {
+    flex: 1;
+    margin-top: 80px; /* Space the calendar down */
+}
+
+/* General container for Calendar and Slideshow */
+.calendar-slideshow .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow the layout to adapt on smaller screens */
+}
+
+/* Calendar Section */
+/* Adjust the calendar size */
+.calendar-container {
+    width: 100%; /* Set to full width */
+    max-width: 1200px; /* Optional: Set a max width for better layout control */
+    margin: 0 auto; /* Center the calendar */
+    padding: 20px;
+}
+
+
+
+/* Adjust the calendar to be wider, like the Task Delegation section */
+#calendar {
+    width: 100%; /* Make the calendar take up the full width */
+    max-width: 800px; /* Set a max-width to control the calendar's size */
+    height: 700px; /* Maintain the height for better layout */
+    border: 2px dashed #ffb6c1; /* Pastel pink dashed border */
+    padding: 10px; /* Add padding for better visual spacing */
+}
+
+
+/* Optional: Increase font size for better visibility */
+.fc .fc-toolbar-title {
+    font-size: 2rem;
+}
+
+
+
+/* Slideshow Section */
+.slideshow-container {
+    width: 35%; /* Adjust as needed to fit next to the calendar */
+    min-width: 250px;
+}
+
+.slideshow {
+    display: none; /* Hide all slides by default */
+}
+
+.image-wrapper {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto; /* Adjust image size responsively */
+    max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+/* Navigation arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Optional: Add a little more spacing for mobile views */
+@media (max-width: 768px) {
+    .calendar-container {
+        width: 100%;
+        margin-bottom: 20px; /* Add some space if it shifts */
+    }
+
+    .slideshow-container {
+        width: 100%;
+    }
+}
+
+/* Wrap the calendar section to include title and calendar within the same border */
+.calendar-wrapper {
+    width: 150%; /* Make the calendar container take up the full width */
+    max-width: 1200px; /* Set a max width for better control */
+    margin: 0 auto; /* Center the calendar */
+    padding: 20px;
+    border: 2px dashed #ffb6c1; /* Pastel pink dashed border around the entire calendar section */
+    border-radius: 10px; /* Optional: rounded corners */
+    background-color: #fff; /* Background color for contrast */
+}
+
+/* Calendar styling */
+#calendar {
+    width: 150%; /* Ensure the calendar takes up the full width */
+    height: 500px; /* Increase height for better visibility */
+    margin-top: 20px; /* Add space between title and calendar */
+}
+
+/* Adjust the title */
+.calendar-wrapper h2 {
+    text-align: center; /* Center the title */
+    font-size: 1.8em; /* Adjust font size as needed */
+    color: #333; /* Title color */
+}
+
+/* Calendar Section (Aesthetic changes) */
+/* Calendar adjustments */
+/* Calendar Section (Aesthetic changes) */
+/* Calendar adjustments */
+
+/* Reduced the size of the pastel pink dashed border around the calendar */
+#calendar {
+    background-color: #f0f0f0;
+    padding: 15px; /* Reduced padding for smaller border space */
+    border-radius: 10px;
+    border: 2px dashed #f6d3e5; /* Reduced the border thickness to 2px and using pastel pink */
+    max-width: 45%; /* Set a max-width for the calendar to make it smaller */
+    margin: 0 auto; /* Center the calendar */
+}
+/* Calendar Section (Aesthetic changes) */
+/* Calendar adjustments */
+
+/* Adjusting the border around the calendar */
+
+
+/* Matching the Task Delegation border for the Calendar */
+#calendar {
+    background-color: #f0f0f0; /* Keep the background color */
+    padding: 20px; /* Keep the padding inside the calendar */
+    border-radius: 10px; /* Rounded corners for the border */
+    border: 3px dashed #a3c6f1; /* Same border width and color as Task Delegation */
+    width: 100%; /* Ensure it takes up full width */
+    max-width: 600px; /* Ensure a max-width for the calendar */
+    margin: 0 auto; /* Center the calendar horizontally */
+}
+/* Caregiver's Calendar Section */
+/* Caregiver's Calendar Section */
+.caregivers-calendar-section {
+    background-color: #f0f0f0; /* Light background color */
+    padding: 15px; /* Inner padding */
+    border-radius: 10px; /* Rounded corners */
+    border: 3px dashed #f6d3e5; /* Pastel pink dashed border (same as Task Delegation) */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Reduce the max-width to match Task Delegation section */
+    margin: 0 auto; /* Center the section horizontally */
+}
+
+
+
+/* Optional: Adjust the overall layout of the calendar and slideshow */
+.slideshow-container {
+    display: flex; /* Align items side by side */
+    justify-content: space-between; /* Space them out evenly */
+    align-items: flex-start; /* Align both sections at the top */
+    max-width: 1200px; /* Optional: limit the overall width of the container */
+    margin: 0 auto; /* Center the container */
+}
+
+
+
+    /* Adjusting alignment for the second slideshow next to the calendar */
+    .slideshow-container .slideshow:nth-child(2) {
+        margin-left: 20px; /* Adds space between the second slideshow and calendar */
+        align-self: flex-start; /* Aligns the second slideshow to the top */
+    }
+
+/* Ensure the calendar and slideshow are displayed next to each other */
+.calendar-slideshow {
+    display: flex;
+    justify-content: space-between; /* Adjusts space between the two sections */
+    gap: 20px; /* Adds some space between the calendar and the slideshow */
+}
+
+/* Adjust the calendar container */
+
+/* Adjust the calendar container with a dashed pastel pink border */
+.calendar-wrapper {
+    flex: 1;
+    border: 2px dashed #ffb3d9; /* Pastel pink dashed border */
+    padding: 20px; /* Optional: Adjust padding */
+    box-sizing: border-box; /* Ensures padding and border don't affect the overall size */
+}
+
+
+/* Adjust the slideshow container */
+.slideshow-container {
+    flex: 1; /* Makes the slideshow container take up the remaining space */
+    padding: 20px; /* Optional: Adjust padding */
+    box-sizing: border-box; /* Ensures padding and border don't affect the overall size */
+}
+
+/* Optional: Adjust slideshow images */
+.slideshow img {
+    max-width: 100%; /* Ensures the images don't overflow their container */
+    height: auto;
+}
+
+/* Make sure everything aligns properly */
+@media screen and (max-width: 768px) {
+    .calendar-slideshow {
+        flex-direction: column; /* Stacks them vertically on smaller screens */
+    }
+}
+
+/* Center and style the video container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Center vertically */
+    background-color: var(--background-color, #f9f9f9); /* Use site's background color or a light pastel */
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Center and style the video container */
+.video-container {
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    min-height: 100vh; /* Full viewport height */
+    background-color: var(--background-color, #f9f9f9); /* Optional background */
+    padding: 20px; /* Add space around the video */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 15px; /* Rounded corners */
+}
+
+/* Demo section overall styling */
+.demo-section {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Style the demo banner */
+.demo-banner h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color, #0077b6); /* Matches the banner color */
+    margin-bottom: 20px;
+}
+
+/* Center the video container */
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+/* Style the video */
+video {
+    width: 90%;
+    max-width: 800px;
+    border: 3px solid var(--primary-color, #00b4d8); /* Aesthetic border */
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Add depth */
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    .demo-banner h2 {
+        font-size: 1.5rem;
+    }
+
+    video {
+        width: 100%;
+    }
+}
+/* Style the How-to-Use section */
+.how-to-use-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px; /* Limit width for better readability */
+    text-align: left; /* Align items to the left */
+}
+
+
+
+/* Import a cute font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Quicksand:wght@400;500&display=swap');
+
+/* Style the How-to-Use section */
+.how-to-use-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px; /* Limit width for better readability */
+    text-align: left; /* Align items to the left */
+    font-family: 'Poppins', sans-serif; /* Use the cute font */
+}
+
+/* Import a cute font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Quicksand:wght@400;500&display=swap');
+
+
+
+/* Import a cute font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Quicksand:wght@400;500&display=swap');
+
+/* Style the How-to-Use section */
+.how-to-use-list {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px; /* Limit width for better readability */
+    text-align: left; /* Align items to the left */
+    font-family: 'Poppins', sans-serif; /* Use the cute font */
+}
+
+    /* Style for each bullet point */
+    .how-to-use-list li {
+        position: relative;
+        padding-left: 40px; /* Add space for custom emoji */
+        margin-bottom: 15px; /* Add spacing between items */
+        font-size: 1.1rem; /* Slightly larger font size for cuteness */
+        color: #000; /* Set font color to black */
+        line-height: 1.6;
+        background: #e0f7fa; /* Light pastel blue background */
+        padding: 10px 15px;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transformation and background change */
+    }
+
+        /* Subtle effect to automatically animate the list item */
+        .how-to-use-list li:nth-child(odd) {
+            transform: scale(1.05); /* Scale up slightly */
+            background-color: #e0f7fa; /* Pastel blue remains */
+        }
+
+        .how-to-use-list li:nth-child(even) {
+            transform: scale(1.05); /* Scale up slightly */
+            background-color: #e0f7fa; /* Pastel blue remains */
+        }
+
+
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/* Style for the paragraph text (The following outlines...) */
+.how-to-use-description {
+    font-size: 1.4rem; /* Increase font size for better readability */
+    font-family: 'Poppins', sans-serif; /* Use the Poppins font for a cute, modern look */
+    color: #333; /* Darker color for contrast */
+    margin-bottom: 20px; /* Add space below the paragraph */
+    font-weight: 500; /* Slightly bold for emphasis */
+}
+
+
+
+
+
+﻿
